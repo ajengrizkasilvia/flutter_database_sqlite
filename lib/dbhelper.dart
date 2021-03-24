@@ -54,7 +54,7 @@ class DbHelper {
     return count;
   } 
 
-//delete databases
+//delete databasess
   Future<int> delete(int id) async {
     Database db = await this.initDb();
     int count = await db.delete('item', where: 'id=?', whereArgs: [id]);
